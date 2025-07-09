@@ -116,7 +116,7 @@
 
 .asset-meta {
     -fx-font-size: 12px;
-    -fx-text-fill: #a0a0a0;
+    -fx-text-fill: #bcbcbc; /* Increased contrast from #a0a0a0 */
 }
 
 .empty-label, .error-label {
@@ -201,4 +201,36 @@
 
 .scroll-pane > .viewport {
     -fx-background-color: transparent;
+}
+
+/* Small action buttons for cards (Edit/Remove) */
+.action-button-small {
+    -fx-background-color: rgba(255, 255, 255, 0.15);
+    -fx-text-fill: #e0e0e0;
+    -fx-font-size: 11px;
+    -fx-padding: 5 10; /* Adjusted padding */
+    -fx-background-radius: 6; /* Slightly softer radius */
+    -fx-border-radius: 6;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(one-pass-box, rgba(0,0,0,0.2), 3, 0, 1, 1); /* Subtle shadow */
+}
+
+.action-button-small:hover {
+    -fx-background-color: rgba(255, 255, 255, 0.25);
+    -fx-effect: dropshadow(one-pass-box, rgba(0,0,0,0.3), 5, 0, 1, 2);
+}
+
+/* Specific styling for edit/remove if needed, e.g., icons or color hints */
+.edit-button-small {
+    /* Example: -fx-graphic: url("/path/to/edit-icon16.png"); */
+    /* Inherits .action-button-small styles */
+}
+
+.remove-button-small {
+    /* Example: -fx-graphic: url("/path/to/delete-icon16.png"); */
+    /* Inherits .action-button-small styles */
+    -fx-text-fill: #f87171; /* Red text for remove, if not using icon */
+}
+.remove-button-small:hover {
+    -fx-background-color: rgba(255, 100, 100, 0.2); /* Hint of red on hover */
 }
